@@ -1,5 +1,3 @@
-[ $(uname) = "Darwin" ] && IS_DARWIN=true || IS_DARWIN=false
-
 ###################
 # Path
 
@@ -9,7 +7,7 @@ puniq () {
         cut -f 2- | tr '\n' : | sed -e 's/:$//' -e 's/^://'
 }
 
-if [ IS_DARWIN ]; then
+if [ $(uname) = "Darwin" ]; then
     # Android tools
     PATH="$HOME/Library/Android/sdk/build-tools/30.0.3:$PATH"
     # LLVM
@@ -30,7 +28,7 @@ export CFLAGS="-Wall -O2 -fstack-protector -D_FORTIFY_SOURCE=2"
 # export CPPFLAGS="-Wall -fstack-protector -D_FORTIFY_SOURCE=2"
 
 # Darwin
-if [ IS_DARWIN ]; then
+if [ $(uname) = "Darwin" ]; then
     # Android
     export ANDROID_HOME="$HOME/Library/Android/sdk"
     # Java
@@ -50,6 +48,6 @@ if [ -f $HOME/.zsh/functions.zsh ]; then
     source $HOME/.zsh/functions.zsh
 fi
 
-if [ ! IS_DARWIN ]; then
+if [ $(uname) != "Darwin" ]; then
     [ -f $HOME/.zsh/android.sh ] && source $HOME/.zsh/android.sh
 fi

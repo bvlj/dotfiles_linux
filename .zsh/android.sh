@@ -4,7 +4,7 @@ fi
 
 echo "Loading android env..."
 
-setopt shwordsplit
+# setopt shwordsplit
 
 export WITH_CCACHE=true
 export CCACHE_DIR="$HOME/android/.ccache/$(basename $(pwd))"

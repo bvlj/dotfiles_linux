@@ -1,5 +1,3 @@
-[ $(uname) = "Darwin" ] && IS_DARWIN=true || IS_DARWIN=false
-
 # Dotfiles
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
@@ -10,7 +8,7 @@ alias adbRestart='adb shell stop && adb shell start'
 alias gitpick='git cherry-pick'
 alias gitlg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 
-if [ IS_DARWIN ]; then
+if [ $(uname) = "Darwin" ]; then
     # Android-like croot
     alias croot='cd "./$(git rev-parse --show-cdup 2>/dev/null)" 2>/dev/null'
     # Sed

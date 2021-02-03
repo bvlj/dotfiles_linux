@@ -1,5 +1,3 @@
-[ $(uname) = "Darwin" ] && IS_DARWIN=true || IS_DARWIN=false
-
 ###################
 # Path
 
@@ -18,7 +16,7 @@ if [ -f $HOME/.zsh/aliases.zsh ]; then
     source $HOME/.zsh/aliases.zsh
 fi
 
-if [ ! IS_DARWIN ]; then
+if [ $(uname) != "Darwin" ]; then
     [ -f $HOME/.zsh/android.sh ] && source $HOME/.zsh/android.sh
 fi
 
