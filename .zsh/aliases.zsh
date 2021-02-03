@@ -27,3 +27,12 @@ alias tarx='tar -xvzf'
 if [ $(which matlab-cli 2> /dev/null) ]; then
     alias matlab="matlab-cli -nosplash -nodesktop"
 fi
+
+if [ $(which youtube-dl 2> /dev/null) ]; then
+    alias yt-dl-mp3="youtube-dl --extract-audio --audio-format mp3 -o '%(title)s.%(ext)s'"
+fi
+
+if [ $(which pg_ctl 2> /dev/null) ]; then
+    alias postgres-start="pg_ctl -D /usr/local/var/postgres start"
+    alias postgres-stop="pg_ctl -D /usr/local/var/postgres stop"
+fi
