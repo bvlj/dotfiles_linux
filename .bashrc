@@ -1,4 +1,4 @@
 # .bashrc
 
 [ -f /etc/bashrc ] && source /etc/bashrc
-[ -f $HOME/.zsh/env.bash ] && source $HOME/.zsh/env.bash
+[ -f $HOME/.sh/env.sh ] && source $HOME/.sh/env.sh

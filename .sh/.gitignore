@@ -1,0 +1,23 @@
+/*
+
+# gitignore
+!.gitignore
+
+!aliases.sh
+!android.sh
+!env.sh
+!functions.sh
+
+# darwin
+!darwin/aliases.sh
+!darwin/env.sh
+
+# linux
+!linux/aliases.sh
+!linux/env.sh
+
+# setup
+!setup.sh
+
+# zsh
+!plugins.zsh
