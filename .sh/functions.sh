@@ -28,6 +28,20 @@ function ssh-set {
     fi
 }
 
+function git-skip {
+    for f in $@; do
+        git update-index --assume-unchanged $f;
+        git update-index --skip-worktree $f;
+    done
+}
+
+function git-unskip {
+    for f in $@; do
+        git update-index --no-assume-unchanged $f;
+        git update-index --no-skip-worktree $f;
+    done
+}
+
 function puniq {
     echo "$1" | tr : '\n' | nl | sort -u -k 2,2 | sort -n |
         cut -f 2- | tr '\n' : | sed -e 's/:$//' -e 's/^://'
