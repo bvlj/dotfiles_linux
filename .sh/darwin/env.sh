@@ -4,6 +4,10 @@ if [ -d "$HOME/Library/Android/sdk/" ]; then
     PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
 fi
 
+if [ -d "$HOME/.nix-profile/bin" ]; then
+    PATH="$HOME/.nix-profile/bin:$PATH"
+fi
+
 # android
 export ANDROID_HOME="$HOME/Library/Android/sdk"
 

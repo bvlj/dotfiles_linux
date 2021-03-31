@@ -10,7 +10,7 @@ export CC="$(which gcc)"
 export CFLAGS="-Wall -O2 -fstack-protector -D_FORTIFY_SOURCE=2"
 # export CPPFLAGS="-Wall -fstack-protector -D_FORTIFY_SOURCE=2"
 
-[ -x $(command -v setopt) ] && setopt nobeep
+[ $(command -v setopt) ] && setopt nobeep
 
 # OS specific
 if [ $(uname) = "Darwin" ]; then

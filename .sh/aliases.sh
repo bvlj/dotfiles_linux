@@ -9,17 +9,17 @@ alias gitpick='git cherry-pick'
 alias gitlg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
 
 # matlab
-if [ -x $(command -v matlab-cli) ]; then
+if [ $(command -v matlab-cli) ]; then
     alias matlab="matlab-cli -nosplash -nodesktop"
 fi
 
 # nix
-if [ -x $(command -v nix-env) ]; then
+if [ $(command -v nix-env) ]; then
     alias nix-cfg="$EDITOR ~/.nixpkgs/darwin-configuration.nix"
     alias nix-gc="nix-collect-garbage -d"
     alias nix-search="nix-env -qaP"
     alias nix-update="nix-env -u"
-    alias nix-upgrade="sudo -i sh -c 'nix-channel --update && nix-env -iA nixpkgs.nix"
+    alias nix-upgrade="nix-channel --update && nix-env -iA nixpkgs.nix"
 fi
 
 # tar
@@ -27,7 +27,7 @@ alias tarc='tar -cvzf'
 alias tarx='tar -xvzf'
 
 # yt-dl
-if [ -x $(command -v youtube-dl) ]; then
+if [ $(command -v youtube-dl) ]; then
     alias yt-dl-mp3="youtube-dl --extract-audio --audio-format mp3 -o '%(title)s.%(ext)s'"
 fi
 
