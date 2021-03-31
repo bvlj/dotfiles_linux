@@ -20,4 +20,4 @@
 !setup.sh
 
 # zsh
-!plugins.zsh
+!config.zsh
