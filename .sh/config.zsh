@@ -7,6 +7,9 @@ if [ -f $HOME/.antigen/antigen.zsh ]; then
     antigen apply
 fi
 
+# AutoCD
+setopt auto_cd
+
 # Beep
 setopt nobeep
 
