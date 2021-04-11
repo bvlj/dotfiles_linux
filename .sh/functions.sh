@@ -42,6 +42,15 @@ function git-unskip {
     done
 }
 
+function play-music {
+    if [ $(command -v mpd) ]; then
+        if [ ! $(pgrep -x mpd) ]; then
+             mpd ~/.mpd/mpd.conf
+        fi
+        ncmpcpp
+    fi
+}
+
 function puniq {
     echo "$1" | tr : '\n' | nl | sort -u -k 2,2 | sort -n |
         cut -f 2- | tr '\n' : | sed -e 's/:$//' -e 's/^://'
