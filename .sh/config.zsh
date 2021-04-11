@@ -18,11 +18,16 @@ autoload -Uz compinit
 compinit
 zstyle ':completion:*' menu select
 
-# Custom key bindings
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
-bindkey '^[[H' backward-word
-bindkey '^[[F' forward-word
+# History search
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+
+bindkey '^[[A' up-line-or-beginning-search
+bindkey '^[[B' down-line-or-beginning-search
+bindkey '^r' history-incremental-search-backward
 
 # History
 setopt share_history
@@ -31,6 +36,10 @@ setopt hist_expire_dups_first
 setopt hist_find_no_dups
 setopt hist_ignore_dups
 setopt hist_reduce_blanks
+
+# Jump words
+bindkey '^[[H' backward-word
+bindkey '^[[F' forward-word
 
 # Theme
 autoload -Uz vcs_info
