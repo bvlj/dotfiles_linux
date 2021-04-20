@@ -40,6 +40,11 @@ setopt hist_reduce_blanks
 # Jump words
 bindkey '^[[H' backward-word
 bindkey '^[[F' forward-word
+bindkey "^[[1;5D" backward-word
+bindkey "^[[1;5C" forward-word
+
+# Delete
+bindkey "\e[3~" delete-char 
 
 # Theme
 autoload -Uz vcs_info
