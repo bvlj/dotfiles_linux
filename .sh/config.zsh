@@ -57,3 +57,10 @@ zstyle ':vcs_info:*' actionformats '%F{green}(%a%c%u%m)%f '
 zstyle ':vcs_info:*' formats '%F{green}(%b%c%u%m)%f '
 
 PROMPT='%B%F{blue}%(!.%1~.%~)%f ${vcs_info_msg_0_}%(!.#.$)%b '
+
+# Title
+function title_precmd() {
+    echo -ne "\033]0;$(pwd | tail -c 16)\007"
+}
+
+add-zsh-hook precmd title_precmd
