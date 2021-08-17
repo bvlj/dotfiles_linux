@@ -15,11 +15,8 @@ fi
 
 # nix
 if [ $(command -v nix-env) ]; then
-    alias nix-cfg="$EDITOR ~/.nixpkgs/darwin-configuration.nix"
     alias nix-gc="nix-collect-garbage -d"
-    alias nix-search="nix-env -qaP"
-    alias nix-update="nix-env -u"
-    alias nix-upgrade="nix-channel --update && nix-env -iA nixpkgs.nix"
+    alias nix-search="nix-env -qa"
 fi
 
 # tar

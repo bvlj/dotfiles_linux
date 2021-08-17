@@ -44,8 +44,12 @@ function git-unskip {
 
 function play-music {
     if [ $(command -v mpd) ]; then
-        if [ ! $(pgrep -x mpd) ]; then
+        local mpd_pid=$(pgrep -x mpd)
+        if [ ! "$mpd_pid" ]; then
              mpd ~/.mpd/mpd.conf
+        elif [ "$1" = "r" ]; then
+            kill $mpd_pid
+            mpd ~/.mpd/mpd.conf
         fi
         ncmpcpp
     fi

@@ -5,6 +5,7 @@ if [ -d "$HOME/Library/Android/sdk/" ]; then
 fi
 
 if [ -d "$HOME/.nix-profile/bin" ]; then
+    # Prepend for priority
     PATH="$HOME/.nix-profile/bin:$PATH"
 fi
 

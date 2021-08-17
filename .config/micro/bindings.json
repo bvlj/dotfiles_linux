@@ -6,5 +6,7 @@
     "Ctrl-p": "Paste",
     "Ctrl-u": "Undo",
     "Ctrl-x": "Quit",
-    "Alt-Ctrl-z": "Redo"
+    "Alt-Ctrl-z": "Redo",
+    "Ctrl-d": "DeleteWordRight",
+    "Tab"   : "Autocomplete|IndentSelection|InsertTab"
 }
