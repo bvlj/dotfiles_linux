@@ -18,6 +18,11 @@ autoload -Uz compinit
 compinit
 zstyle ':completion:*' menu select
 
+# History
+HISTFILE=$HOME/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+
 # History search
 autoload -U up-line-or-beginning-search
 autoload -U down-line-or-beginning-search
@@ -25,6 +30,7 @@ autoload -U down-line-or-beginning-search
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 
+bindkey -e
 bindkey '^[[A' up-line-or-beginning-search
 bindkey '^[[B' down-line-or-beginning-search
 bindkey '^r' history-incremental-search-backward
@@ -44,7 +50,7 @@ bindkey "^[[1;5D" backward-word
 bindkey "^[[1;5C" forward-word
 
 # Delete
-bindkey "\e[3~" delete-char 
+bindkey "\e[3~" delete-char
 
 # Theme
 autoload -Uz vcs_info
