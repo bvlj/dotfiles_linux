@@ -18,6 +18,9 @@ if [ $(command -v nix-env) ]; then
     alias nix-gc="nix-collect-garbage -d"
     alias nix-search="nix-env -qa"
 fi
+if [ $(command -v nix-channel) ]; then
+    alias nix-chan="nix-channel"
+fi
 
 # tar
 alias tarc='tar -cvzf'

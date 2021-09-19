@@ -1,6 +1,6 @@
 # Plugins
-if [ -f $HOME/.antigen/antigen.zsh ]; then
-    source $HOME/.antigen/antigen.zsh
+if [ -f $HOME/.config/antigen/antigen.zsh ]; then
+    source $HOME/.config/antigen/antigen.zsh
     antigen bundle zsh-users/zsh-autosuggestions
     antigen bundle zsh-users/zsh-history-substring-search
     antigen bundle zsh-users/zsh-syntax-highlighting
