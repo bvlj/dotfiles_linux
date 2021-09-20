@@ -8,6 +8,7 @@
         gnupg
         gnused
         htop
+        neofetch
         p7zip
         pass
       ];
@@ -36,8 +37,7 @@
         # LaTeX
         (texlive.combine {
           inherit (texlive)
-          scheme-basic
-          xifthen
+          scheme-full
           ;
         })
       ];
@@ -53,6 +53,7 @@
         ffmpeg
         imagemagick
         libheif
+        mpc_cli
         mpd
         ncmpcpp
         youtube-dl
