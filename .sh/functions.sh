@@ -59,3 +59,8 @@ function puniq {
     echo "$1" | tr : '\n' | nl | sort -u -k 2,2 | sort -n |
         cut -f 2- | tr '\n' : | sed -e 's/:$//' -e 's/^://'
 }
+
+function mvr {
+    mv -v $1 $(echo "$1" | sed "s/$2/$3/")
+    return $?
+}
