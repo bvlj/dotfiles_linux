@@ -63,5 +63,16 @@
        "/share"
       ];
     };
+
+    myUsiPkgs = pkgs.buildEnv {
+      name = "my-usi-pkgs";
+      paths = [
+        nodejs-14_x
+      ];
+      pathsToLink = [
+       "/bin"
+       "/share"
+      ];
+    };
   };
 }
