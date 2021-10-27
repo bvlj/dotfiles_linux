@@ -3,16 +3,11 @@
 # gitignore
 !.gitignore
 
-!aliases.sh
-!android.sh
 !env.sh
 !functions.sh
 
-# darwin
-!darwin/aliases.sh
-!darwin/env.sh
-
 # linux
+!linux/android.sh
 !linux/aliases.sh
 !linux/env.sh
 
