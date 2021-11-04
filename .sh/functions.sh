@@ -61,6 +61,7 @@ function puniq {
 }
 
 function mvr {
-    mv -v $1 $(echo "$1" | sed "s/$2/$3/")
+    local dest=$(echo "$1" | sed "s/$2/$3/")
+    mv -v "$1" "$dest"
     return $?
 }
