@@ -14,3 +14,7 @@ alias gitlg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Crese
 # tar
 alias tarc='tar -cvzf'
 alias tarx='tar -xvzf'
+
+# cd
+alias '...'='cd ../..'
+alias '....'='cd ../../..'

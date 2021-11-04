@@ -19,6 +19,9 @@
       tarx = "tar -xvzf";
       # yt-dl
       yt-dl-mp3 = "youtube-dl --extract-audio --audio-format mp3 -o '%(title)s.%(ext)s'";
+      # cd
+      "..." = "cd ../..";
+      "...." = "cd ../../..";
     };
 
     systemPackages = [
@@ -87,7 +90,7 @@
       dock = {
         minimize-to-application = true;
         mru-spaces = false;
-        orientation = "left";
+        orientation = "bottom";
         show-process-indicators = true;
         show-recents = true;
       };
