@@ -73,6 +73,10 @@
   system = {
     defaults = {
       NSGlobalDomain = {
+        AppleEnableSwipeNavigateWithScrolls = true;
+        AppleInterfaceStyleSwitchesAutomatically = true;
+        AppleMeasurementUnits = "Centimeters";
+        AppleMetricUnits = 1;
         AppleShowAllExtensions = true;
         AppleShowScrollBars = "WhenScrolling";
         AppleTemperatureUnit = "Celsius";
