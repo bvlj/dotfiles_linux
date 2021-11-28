@@ -8,7 +8,7 @@
       # adb
       adbRestart = "adb shell stop && adb shell start";
       # git
-      croot = "cd './$(git rev-parse --show-cdup 2>/dev/null)' 2>/dev/null";
+      croot = "cd './\\$(git rev-parse --show-cdup 2>/dev/null)' 2> /dev/null";
       gitpick = "git cherry-pick";
       gitlg = "git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative";
       # nix
