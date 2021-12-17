@@ -92,11 +92,14 @@
       };
 
       dock = {
+        autohide = true;
+        autohide-delay = "1000.0";
         minimize-to-application = true;
         mru-spaces = false;
         orientation = "bottom";
         show-process-indicators = true;
         show-recents = true;
+        static-only = false;
       };
 
       finder = {
