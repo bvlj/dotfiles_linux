@@ -35,7 +35,6 @@
       pkgs.gnupg
       pkgs.gnused
       pkgs.htop
-      pkgs.neofetch
       pkgs.p7zip
       pkgs.pass
       # media
@@ -44,7 +43,6 @@
       pkgs.libheif
       pkgs.mpv-with-scripts
       # music
-      pkgs.mpc_cli
       pkgs.mpd
       pkgs.ncmpcpp
       pkgs.youtube-dl
