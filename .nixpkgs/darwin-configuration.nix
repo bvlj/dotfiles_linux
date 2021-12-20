@@ -22,6 +22,10 @@
       # cd
       "..." = "cd ../..";
       "...." = "cd ../../..";
+      # grep
+      "grep" = "grep --color=auto";
+      # ls
+      "ls" = "ls --color=auto";
     };
 
     systemPackages = [
@@ -38,6 +42,7 @@
       pkgs.ffmpeg
       pkgs.imagemagick
       pkgs.libheif
+      pkgs.mpv-with-scripts
       # music
       pkgs.mpc_cli
       pkgs.mpd
