@@ -65,3 +65,11 @@ function mvr {
     mv -v "$1" "$dest"
     return $?
 }
+
+function open-th {
+    if [ $(uname) = "Linux" ]; then
+        xdg-open $(find -s . -type f -maxdepth 1 | sed -n "${1}p")
+    else
+        open $(find -s . -type f -maxdepth 1 | sed -n "${1}p")
+    fi
+}
