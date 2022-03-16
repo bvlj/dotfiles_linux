@@ -7,8 +7,6 @@
       dotfiles = "git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME";
       # adb
       adbRestart = "adb shell stop && adb shell start";
-      # code
-      code = "codium";
       # git
       croot = "cd './\\$(git rev-parse --show-cdup 2>/dev/null)' 2> /dev/null";
       gitpick = "git cherry-pick";
@@ -27,7 +25,7 @@
       # grep
       "grep" = "grep --color=auto";
       # ls
-      "ls" = "ls --color=auto";
+      "ls" = "ls -1";
     };
 
     systemPackages = [
@@ -117,6 +115,8 @@
       finder = {
         AppleShowAllExtensions = true;
         FXEnableExtensionChangeWarning = false;
+        FXDefaultSearchScope = "SCcf";
+        FXPreferredViewStyle = "Nlsv";
         _FXShowPosixPathInTitle = true;
       };
 
