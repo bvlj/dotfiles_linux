@@ -1,10 +1,10 @@
 # Plugins
 if [ -f $HOME/.config/antigen/antigen.zsh ]; then
-    source $HOME/.config/antigen/antigen.zsh
-    antigen bundle zsh-users/zsh-autosuggestions
-    antigen bundle zsh-users/zsh-history-substring-search
-    antigen bundle zsh-users/zsh-syntax-highlighting
-    antigen apply
+  source $HOME/.config/antigen/antigen.zsh
+  antigen bundle zsh-users/zsh-autosuggestions
+  antigen bundle zsh-users/zsh-history-substring-search
+  antigen bundle zsh-users/zsh-syntax-highlighting
+  antigen apply
 fi
 
 # AutoCD
@@ -38,9 +38,9 @@ bindkey '^r' history-incremental-search-backward
 # History
 setopt share_history
 setopt append_history
-setopt hist_expire_dups_first
 setopt hist_find_no_dups
 setopt hist_ignore_dups
+setopt hist_ignore_space
 setopt hist_reduce_blanks
 
 # Jump words
@@ -70,8 +70,6 @@ zstyle ':vcs_info:*' formats '%F{green}(%b%c%u%m)%f '
 PROMPT='%B%F{blue}%(!.%1~.%~)%f ${vcs_info_msg_0_}%(!.#.$)%b '
 
 # Title
-function title_precmd() {
-    echo -ne "\033]0;$(pwd | tail -c 16)\007"
-}
+function title_precmd() { echo -ne "\033]0;$(pwd | tail -c 16)\007" }
 
 add-zsh-hook precmd title_precmd
