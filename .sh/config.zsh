@@ -22,6 +22,7 @@ zstyle ':completion:*' menu select
 HISTFILE=$HOME/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
+setopt HIST_IGNORE_SPACE
 
 # History search
 autoload -U up-line-or-beginning-search
@@ -70,6 +71,21 @@ zstyle ':vcs_info:*' formats '%F{green}(%b%c%u%m)%f '
 PROMPT='%B%F{blue}%(!.%1~.%~)%f ${vcs_info_msg_0_}%(!.#.$)%b '
 
 # Title
-function title_precmd() { echo -ne "\033]0;$(pwd | tail -c 16)\007" }
+update_terminal_title() {
+  local url_path=''
+  {
+    local i ch hexch LC_CTYPE=C LC_COLLATE=C LC_ALL= LANG=
+    for ((i = 1; i <= ${#PWD}; ++i)); do
+      ch="$PWD[i]"
+      if [[ "$ch" =~ [/._~A-Za-z0-9-] ]]; then
+        url_path+="$ch"
+     else
+       printf -v hexch "%02X" "'$ch"
+       url_path+="%$hexch"
+     fi
+    done
+  }
+  echo -ne "\033]0;$url_path\007"
+}
 
-add-zsh-hook precmd title_precmd
+add-zsh-hook precmd update_terminal_title
