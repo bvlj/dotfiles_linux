@@ -4,7 +4,7 @@
 # .files
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 # adb
-alias adbRestart='adb shell stop && adb shell start'
+alias adb-restart='adb shell stop && adb shell start'
 # cd
 alias '...'='cd ../..'
 alias '....'='cd ../../..'
@@ -17,6 +17,8 @@ alias grep='grep --color=auto'
 alias ls='ls -1'
 # open
 alias open='xdg-open'
+# rand-str
+alias rand-str="LC_ALL=C tr -dc 'A-Za-z0-9!#$%&~' < /dev/urandom | head -c $1"
 
 ###
 # Session variables
