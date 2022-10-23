@@ -23,8 +23,10 @@ alias rand-str="LC_ALL=C tr -dc 'A-Za-z0-9!#$%&~' < /dev/urandom | head -c $1"
 ###
 # Session variables
 export EDITOR="micro"
+export JAVA_HOME="/usr/lib/jvm/temurin-17-jdk"
 
 ###
 # Path
 [ -e "$HOME/.local/bin" ] && PATH="$PATH:$HOME/.local/bin"
 [ -e "$HOME/.sh/scripts" ] && PATH="$PATH:$HOME/.sh/scripts"
+[ -e "$HOME/.local/share/npm" ] && PATH="$PATH:$HOME/.local/share/npm"
