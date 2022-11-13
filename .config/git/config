@@ -1,0 +1,20 @@
+[alias]
+    id = "! git-identity"
+    identity = "! git-identity"
+    skip = "! git-skip"
+    unskip = "! git-unskip"
+
+[user]
+    useConfigOnly = true
+
+[user "lineage"]
+    email = "joey@lineageos.org"
+    name = "Joey"
+
+[user "personal"]
+    email = "bevilacquajoey@gmail.com"
+    name = "Joey"
+
+[user "usi"]
+    email = "bevilj@usi.ch"
+    name = "Joey Bevilacqua"
