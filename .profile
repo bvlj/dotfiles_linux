@@ -1,0 +1,11 @@
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
+
+export ANDROID_HOME="$XDG_DATA_HOME/android"
+export CUDA_CACHE_PATH="$XDG_CACHE_HOME/nv"
+export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"
+export GRADLE_USER_HOME="$XDG_DATA_HOME/gradle"
+export LESSHISTFILE="$XDG_STATE_HOME/less/history"
+export SQLITE_HISTORY="$XDG_CACHE_HOME/sqlite_history"

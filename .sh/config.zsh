@@ -15,11 +15,11 @@ setopt nobeep
 
 # Compinit
 autoload -Uz compinit
-compinit
+compinit -d "$XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION"
 zstyle ':completion:*' menu select
 
 # History
-HISTFILE=$HOME/.histfile
+HISTFILE="$XDG_STATE_HOME/zsh/history"
 HISTSIZE=1000
 SAVEHIST=1000
 setopt HIST_IGNORE_SPACE
