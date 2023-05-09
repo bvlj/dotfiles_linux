@@ -4,6 +4,9 @@
     skip = "! git-skip"
     unskip = "! git-unskip"
 
+[user]
+    useConfigOnly = true
+
 [user "lineage"]
     email = "joey@lineageos.org"
     name = "Joey"
@@ -17,4 +20,4 @@
     name = "Joey Bevilacqua"
 
 [color]
-	ui = auto
+    ui = auto
