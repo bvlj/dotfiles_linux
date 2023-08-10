@@ -1,12 +1,3 @@
-# Plugins
-if [ -f $HOME/.config/antigen/antigen.zsh ]; then
-  source $HOME/.config/antigen/antigen.zsh
-  antigen bundle zsh-users/zsh-autosuggestions
-  antigen bundle zsh-users/zsh-history-substring-search
-  antigen bundle zsh-users/zsh-syntax-highlighting
-  antigen apply
-fi
-
 # AutoCD
 setopt auto_cd
 
@@ -72,20 +63,22 @@ PROMPT='%B%F{blue}%(!.%1~.%~)%f ${vcs_info_msg_0_}%(!.#.$)%b '
 
 # Title
 update_terminal_title() {
-  local url_path=''
-  {
-    local i ch hexch LC_CTYPE=C LC_COLLATE=C LC_ALL= LANG=
-    for ((i = 1; i <= ${#PWD}; ++i)); do
-      ch="$PWD[i]"
-      if [[ "$ch" =~ [/._~A-Za-z0-9-] ]]; then
-        url_path+="$ch"
-     else
-       printf -v hexch "%02X" "'$ch"
-       url_path+="%$hexch"
-     fi
-    done
-  }
-  echo -ne "\033]0;$url_path\007"
+  emulate -L zsh
+  setopt prompt_subst
+
+  [[ "$EMACS" == *term* ]] && return
+
+  term_title="%20<..<%~%<<"
+
+  case "$TERM" in
+    cygwin|xterm*|putty*|rxvt*|ansi)
+      print -Pn "\e]2;$term_title:q\a"
+      print -Pn "\e]1;$term_title:q\a"
+    ;;
+    screen*|tmux*)
+      print -Pn "\ek$term_title:q\e\\"
+    ;;
+  esac
 }
 
 add-zsh-hook precmd update_terminal_title
