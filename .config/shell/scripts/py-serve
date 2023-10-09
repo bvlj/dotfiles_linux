@@ -23,6 +23,9 @@ def main():
       httpd.serve_forever()
     except KeyboardInterrupt:
       pass
+    finally:
+      httpd.shutdown()
+      httpd.server_close()
 
 
 if __name__ == '__main__':
