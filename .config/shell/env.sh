@@ -32,3 +32,7 @@ export JAVA_HOME="/usr/lib/jvm/temurin-17-jdk"
 ###
 # Path
 [ -e "$XDG_CONFIG_HOME/shell/scripts" ] && PATH="$PATH:$XDG_CONFIG_HOME/shell/scripts"
+
+###
+# Tokens
+[ -e "$XDG_CONFIG_HOME/shell/env.tokens.sh" ] && source "$XDG_CONFIG_HOME/shell/env.tokens.sh"
