@@ -31,6 +31,7 @@ export JAVA_HOME="/usr/lib/jvm/temurin-17-jdk"
 
 ###
 # Path
+[ -e "$XDG_BIN_HOME" ] && PATH="$PATH:$XDG_BIN_HOME"
 [ -e "$XDG_CONFIG_HOME/shell/scripts" ] && PATH="$PATH:$XDG_CONFIG_HOME/shell/scripts"
 
 ###
