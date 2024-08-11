@@ -1,0 +1,26 @@
+{
+  "name": "u1",
+  "comment": "",
+  "use-theme-colors": false,
+  "foreground-color": "#EEE7E7",
+  "background-color": "#0C0809",
+  "palette": [
+    "#0C0809",
+    "#8C5D59",
+    "#9F7C65",
+    "#C5766F",
+    "#577497",
+    "#6B9CA2",
+    "#714E50",
+    "#DBDAD1",
+
+    "#B2B4B6",
+    "#4C3948",
+    "#B88870",
+    "#956265",
+    "#6B9C9E",
+    "#48C2D0",
+    "#845C5E",
+    "#FAF4EF"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "u0",
+  "comment": "Ported for Terminix Colour Scheme",
+  "use-theme-colors": false,
+  "foreground-color": "#e8dace",
+  "background-color": "#120d12",
+  "palette": [
+    "#120d12",
+    "#9d6960",
+    "#c7745d",
+    "#d69d70",
+    "#caa775",
+    "#6e6691",
+    "#edd098",
+    "#e8dace",
+
+    "#a19890",
+    "#cd8978",
+    "#ee866a",
+    "#f3b47e",
+    "#f6c89a",
+    "#958bc2",
+    "#f8da9e",
+    "#fbecdf"
+  ]
+}
