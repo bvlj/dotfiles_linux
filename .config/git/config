@@ -1,11 +1,15 @@
 [alias]
     id = "! git-identity"
     identity = "! git-identity"
+    root = "! cd \"./$(git rev-parse --show-cdup)\""
     skip = "! git-skip"
     unskip = "! git-unskip"
 
 [color]
     ui = auto
+
+[core]
+    ignorecase = true
 
 [filter "lfs"]
     clean = git-lfs clean -- %f
