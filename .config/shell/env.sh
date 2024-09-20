@@ -27,7 +27,7 @@ alias pbpaste="xclip -selection c -o"
 ###
 # Session variables
 export EDITOR="micro"
-export JAVA_HOME="/usr/lib/jvm/temurin-17-jdk"
+export JAVA_HOME="/usr/lib/jvm/temurin-21-jdk"
 
 ###
 # Path
